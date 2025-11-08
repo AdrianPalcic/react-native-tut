@@ -77,7 +77,7 @@ export const createHomeStyles = (colors: ColorScheme) => {
       fontWeight: "700",
       minWidth: 40,
       textAlign: "right",
-      color: colors.success,
+      color: colors.primary,
     },
     inputSection: {
       paddingHorizontal: 24,

@@ -1,30 +1,24 @@
-import useTheme, { ColorScheme } from "@/hooks/useTheme";
-import { StyleSheet, Text, View } from "react-native";
-
+import { createHomeStyles } from "@/assets/styles/home.styles";
+import Header from "@/components/Header";
+import useTheme from "@/hooks/useTheme";
+import { LinearGradient } from "expo-linear-gradient";
+import { StatusBar } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 export default function Index() {
   const { toggleDarkMode, colors } = useTheme();
 
-  const styles = createStyles(colors);
+  const styles = createHomeStyles(colors);
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.content}>Hello React Native. Pls work Cmooon</Text>
-    </View>
+    <LinearGradient
+      colors={colors.gradients.background}
+      style={styles.container}
+    >
+      <StatusBar barStyle={colors.statusBarStyle} />
+
+      <SafeAreaView style={styles.safeArea}>
+        <Header />
+      </SafeAreaView>
+    </LinearGradient>
   );
 }
-
-const createStyles = (colors: ColorScheme) => {
-  const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      justifyContent: "center",
-      alignItems: "center",
-      backgroundColor: colors.bg,
-    },
-    content: {
-      fontSize: 22,
-      color: "black",
-    },
-  });
-  return styles;
-};
