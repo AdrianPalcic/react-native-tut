@@ -31,7 +31,7 @@ const TodoInput = () => {
       <View style={styles.inputWrapper}>
         <TextInput
           style={styles.input}
-          placeholder="Što trebam napraviti?"
+          placeholder="Što treba napraviti?"
           value={newTodo}
           onChangeText={setNewTodo}
           onSubmitEditing={handleAddTodo}
@@ -39,7 +39,7 @@ const TodoInput = () => {
         />
         <TouchableOpacity
           onPress={handleAddTodo}
-          activeOpacity={0.1}
+          activeOpacity={0.7}
           disabled={!newTodo.trim()}
         >
           <LinearGradient

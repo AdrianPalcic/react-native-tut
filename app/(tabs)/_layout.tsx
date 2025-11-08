@@ -29,16 +29,16 @@ const TabsLayout = () => {
       <Tabs.Screen
         name="index"
         options={{
-          title: "Todos",
+          title: "Zadatci",
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="flash-outline" size={size} color={color} />
+            <Ionicons name="logo-apple-ar" size={size} color={color} />
           ),
         }}
       />
       <Tabs.Screen
         name="settings"
         options={{
-          title: "Settings",
+          title: "Postavke",
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="settings" size={size} color={color} />
           ),

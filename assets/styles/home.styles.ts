@@ -80,13 +80,14 @@ export const createHomeStyles = (colors: ColorScheme) => {
       color: colors.primary,
     },
     inputSection: {
-      paddingHorizontal: 24,
+      paddingHorizontal: 18,
       paddingBottom: 12,
     },
     inputWrapper: {
       flexDirection: "row",
-      alignItems: "flex-end",
-      gap: 16,
+      alignItems: "center",
+      justifyContent: "center",
+      gap: 8,
     },
     input: {
       flex: 1,
@@ -105,8 +106,8 @@ export const createHomeStyles = (colors: ColorScheme) => {
       borderColor: colors.primary,
     },
     addButton: {
-      width: 56,
-      height: 56,
+      width: 50,
+      height: 50,
       borderRadius: 28,
       justifyContent: "center",
       alignItems: "center",
